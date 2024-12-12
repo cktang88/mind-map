@@ -2,6 +2,18 @@
 
 A simple web application that converts PDF documents into interactive mind maps using Google's Gemini 2.0 Flash (experimental). Built with Next.js and React Flow.
 
+NOTES: for some reason, the Gemini Pro model works much faster than the Flash model. The flash model seems to generate too much text.
+
+NOTE: :warning: This doesn't work for long summaries, I get:
+
+```
+ POST /api/generate-quiz 500 in 65413ms
+ ⨯ ../../src/server/pipe-readable.ts (144:11) @ pipeToNodeResponse
+ ⨯ Internal error: Error: failed to pipe response
+```
+
+since I assume the generated response is too long and the model or connection times out.
+
 ## Features
 
 <strong>📄 PDF Upload & Processing</strong>

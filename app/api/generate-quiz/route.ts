@@ -17,14 +17,14 @@ export async function POST(req: Request) {
       {
         role: "system",
         content:
-          "You are a document analyzer. Extract the most important points from the provided PDF document. Focus on key information, main ideas, and significant details, such as any anecdotes or statistics or past cited studies by other authors.",
+          "You are a document analyzer. Extract the most important points from the provided PDF document. Focus on key information, main ideas, and significant details, such as any anecdotes or statistics or past cited studies by other authors. If it's a book, do one high level point per chapter.",
       },
       {
         role: "user",
         content: [
           {
             type: "text",
-            text: "Please read this PDF and extract the key points. Include relevant context where helpful.",
+            text: "Please read this PDF and extract the key points. For each key point, include subarguments or subpoints that are relevant to the key point. These may be statistics, anecdotes, or other details that flesh out the key point. Be VERY specific, for example, don't say `discusses the importance of X`, say what it discussed about X and what it said specifically about X.",
           },
           {
             type: "file",
