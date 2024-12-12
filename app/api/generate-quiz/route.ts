@@ -7,14 +7,17 @@ export const maxDuration = 60;
 export async function POST(req: Request) {
   const { files } = await req.json();
   const firstFile = files[0].data;
+  if (!process.env.GOOGLE_GENERATIVE_AI_MODEL) {
+    throw new Error("Missing GOOGLE_GENERATIVE_AI_MODEL environment variable");
+  }
 
   const result = await streamObject({
-    model: google("gemini-1.5-pro-latest"),
+    model: google(process.env.GOOGLE_GENERATIVE_AI_MODEL),
     messages: [
       {
         role: "system",
         content:
-          "You are a document analyzer. Extract the most important points from the provided PDF document. Focus on key information, main ideas, and significant details.",
+          "You are a document analyzer. Extract the most important points from the provided PDF document. Focus on key information, main ideas, and significant details, such as any anecdotes or statistics or past cited studies by other authors.",
       },
       {
         role: "user",

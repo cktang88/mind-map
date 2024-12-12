@@ -1,27 +1,30 @@
 # PDF Mind Map Maker
 
-A simple web application that converts PDF documents into interactive mind maps using Google's Gemini Pro AI. Built with Next.js and React Flow.
+A simple web application that converts PDF documents into interactive mind maps using Google's Gemini 2.0 Flash (experimental). Built with Next.js and React Flow.
 
 ## Features
 
 <strong>📄 PDF Upload & Processing</strong>
-  - Drag & drop interface
-  - Support for PDFs up to 5MB
-  - Real-time processing feedback
+
+- Drag & drop interface
+- Support for PDFs up to 5MB
+- Real-time processing feedback
 
 <br>
 
 <strong>🧠 AI-Powered Analysis</strong>
-  - Automatic key point extraction
-  - Context-aware organization
-  - Powered by Google's Gemini Pro
+
+- Automatic key point extraction
+- Context-aware organization
+- Powered by Google's Gemini 2.0 Flash (experimental)
 
 <br><strong>🗺️ Interactive Mind Maps</strong>
-  - Expandable/collapsible nodes
-  - Draggable interface
-  - Smooth animations
-  - Mini-map navigation
-  - Background grid for better visualization
+
+- Expandable/collapsible nodes
+- Draggable interface
+- Smooth animations
+- Mini-map navigation
+- Background grid for better visualization
 
 ## Tech Stack
 
@@ -82,6 +85,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
+
 - [Vercel's AI SDK PDF Support](https://vercel.com/docs/ai/ai-sdk/pdf-support) for the PDF processing
 - [React Flow](https://reactflow.dev/) for the mind map visualization
 - [Google Generative AI](https://ai.google.dev/) for the AI-powered analysis
